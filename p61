@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+void strencode(char str[])
+{
+    int i=0;
+    for(i=0;i<(strlen(str));i++)
+	{
+    if(str[i]>='A'&&str[i]<='Z')
+       str[i]+=3;
+    if(str[i]>='a'&&str[i]<='z')
+       str[i]-=3;
+    }
+}
+int main()
+{
+   char str[100]={0};
+    gets(str);
+    strencode(str);
+    puts(str);
+    return 0;
+}
