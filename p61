@@ -1,3 +1,6 @@
+//将输入的字符串的大写字母加3；小写字母减3；
+
+
 #include<stdio.h>
 #include<string.h>
 void strencode(char str[])
