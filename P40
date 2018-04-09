@@ -1,0 +1,18 @@
+//计算f(x)=1/(1+x*x)的积分
+
+#include<stdio.h>
+double fun(double a,double b);
+int main()
+{
+	double a,b;
+	scanf("%lf%lf",&a,&b);
+	printf("%lf\n",fun(a,b));
+}
+double fun(double a,double b)
+{
+	double y=0,x,i;
+	x=(b-a)/10000000;
+	for(i=1;a+i*x<b;i++)
+	y+=x/(1+(a+i*x)*(a+i*x));
+	return y;
+}
