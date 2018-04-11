@@ -1,0 +1,23 @@
+//在一串字符串中某位置插入一个字符
+
+
+#include <stdio.h>
+#include <string.h>
+int main ()
+{
+	char x,*p,a[100];
+	int  k,l;
+	printf("请输入被插入的字符串\n");
+		gets(a);
+	printf("请输入要插入的字符\n"); 
+		scanf("%c",&x);
+	printf("请输入要插入的位置\n"); 
+		scanf("%d",&k);
+		l=strlen(a);
+	for(p=a+l+1;p>k+a;p--)
+	{
+		  *p=*(p-1);
+	}
+		*p=x;
+	printf("%s",a);
+} 
