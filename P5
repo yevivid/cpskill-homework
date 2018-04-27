@@ -1,0 +1,21 @@
+ 找幸运数，就是一个数正着数倒着数都是一样的就是幸运数，比如说1221就是
+ 
+ 
+ 
+ #include<stdio.h>
+int main()
+{
+	int a,b,x;
+	scanf("%d",&a);
+	x=0;
+	b=a;
+	while(b>0)
+	{
+		x=x*10+b%10;
+		b/=10;
+	}
+	if(a==x)
+	printf("yes");
+	else
+	printf("no");
+}
