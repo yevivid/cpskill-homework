@@ -1,0 +1,36 @@
+二分查找
+输入数据个数，数组具体数；要找的数；输出其所在位置；
+#include<stdio.h>
+int BinarySearch(int a[100],int find,int n);
+int main ()
+{
+	int find,n,i,a[100];
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	scanf("%d",&find);
+	i=BinarySearch(a,find,n);
+	if(i>=0)
+		printf("%d",i);
+	else
+		printf("null");
+}
+int BinarySearch(int a[100],int find,int n)
+{
+	int low,upper,mid;
+	low=0;
+	upper=n-1;
+	while(low<=upper)
+	{
+	mid=upper+(low-upper)/2;
+	if(a[mid]<find)
+		low=mid+1;
+	else if(a[mid]>find)
+		upper=mid-1;
+	else
+		return mid;
+	}
+	return -1;
+}
